@@ -6,8 +6,8 @@ class ProjectWithDataTest < ActiveSupport::TestCase
 
 	def	create_project_with_data
 		@project = Project.new
-		newly_done = Task.new(size: 3, completed: 1.day.ago)
-		old_done = Task.new(size: 2, completed: 6.months.ago)
+		newly_done = Task.new(size: 3, completed_at: 1.day.ago)
+		old_done = Task.new(size: 2, completed_at: 6.months.ago)
 		small_not_done = Task.new(size: 1)
 		large_not_done = Task.new(size: 4)
 		@project.tasks = [newly_done, old_done, small_not_done, large_not_done]
